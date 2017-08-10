@@ -4,7 +4,9 @@ const List = (props) => {
   return (
     <ul>
       {props.items.map((item, index) => {
+
         return (
+
           <div className = 'wineWrap'>
 
             <div className='wineList'>
@@ -15,7 +17,7 @@ const List = (props) => {
 
                 <div className='bottleInfo'>
                   <a href={item.link}> {item.name} </a>
-                  <p> Country: {item.region} </p>
+                  <p> {item.region.slice(0, (item.region.indexOf('>')))} </p>
                   <p> Price: ${item.price} </p>
                 </div>
 
